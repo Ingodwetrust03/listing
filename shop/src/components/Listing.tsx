@@ -11,7 +11,7 @@ export default function Listing ({items}: Items) {
     }
 
 
-    const itemElement: any = (item: Item) => <div className="item" key={item.listing_id}>
+    const itemElement: Function = (item: Item) => <div className="item" key={item.listing_id}>
         <div className="item-image">
             <a href={item.url}>
                 <img src={item.MainImage["url_170x135"]} alt={item.title}/>

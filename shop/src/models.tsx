@@ -11,4 +11,5 @@ export default interface Item {
     price?: string;
     quantity?: number;
     level?: string;
+    state?: string;
 }

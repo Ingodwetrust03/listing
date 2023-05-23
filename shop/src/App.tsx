@@ -1,6 +1,7 @@
 import './App.css'
 import Listing from "./components/Listing";
 import {useEffect, useState} from "react";
+import Items from "./models";
 
 
 
@@ -16,8 +17,8 @@ function App() {
             fetch('/src/etsy.json')
                 .then(response => response.json())
                 .then((json) => {
-                    const jsonData: Array<any> = JSON.parse(JSON.stringify(json))
-                    let itemsArr: Array<any> = [];
+                    const jsonData: Array<Items> = JSON.parse(JSON.stringify(json))
+                    let itemsArr: Array<Items> = [];
 
                     jsonData.map(elem => {
                         if (elem.MainImage !== undefined && elem.state === "active") {
